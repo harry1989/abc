@@ -1,0 +1,15 @@
+{
+  "name": "apache-benchmark-client",
+  "version": "0.0.1",
+  "description": "AB (Apache Benchmark) like tools to measure the metrics related to page loading.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test "
+  },
+  "keywords": [
+    "benchmark",
+    "performance"
+  ],
+  "author": "Sriharsha Sistalam",
+  "license": "Apache-2.0"
+}
