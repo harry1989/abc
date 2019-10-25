@@ -16,13 +16,13 @@ Usage:
 ------
 
 Install the binaries
-`npm install -g abc`
+`npm install -g ab-client`
 
 Look at help guide for all options
-`abc -h`
+`ab-client -h`
 
 Sample invocation
-`abc --url 'https://google.com' --metrics dns,ttfb,domInteractiveTime,pageLoadTime`
+`ab-client --url 'https://google.com' --metrics dns,ttfb,domInteractiveTime,pageLoadTime`
 ```
 Benchmark results..:
 URL:  https://google.com
@@ -45,7 +45,7 @@ Dependencies:
 
 How does it work?
 ------------------
-- ABC internally invokes the pupeteer in the headless mode.
+- AB-Client internally invokes the pupeteer in the headless mode.
 - Capture the metrics using the navigation API
 - Calculates the required metrics based on calculation.
 - Averages over several samples and prints the stat.

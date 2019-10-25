@@ -1,8 +1,21 @@
 {
-  "name": "apache-benchmark-client",
+  "name": "ab-client",
   "version": "0.0.1",
   "description": "AB (Apache Benchmark) like tools to measure the metrics related to page loading.",
+  "author": {
+    "name": "Sriharsha Sistalam",
+    "email": "sriharsha.sm@gmail.com",
+    "url": "https://twitter.com/@harry_sistalam"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harry1989/abc"
+  },
+  "license": "Apache-2.0",
   "main": "index.js",
+  "bin": {
+    "ab-client": "index.js"
+  },
   "scripts": {
     "test": "npm run test "
   },
@@ -10,6 +23,14 @@
     "benchmark",
     "performance"
   ],
-  "author": "Sriharsha Sistalam",
-  "license": "Apache-2.0"
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "console.table": "^0.10.0",
+    "expr-eval": "^2.0.2",
+    "puppeteer": "^2.0.0",
+    "simple-statistics": "^7.0.5"
+  }
 }

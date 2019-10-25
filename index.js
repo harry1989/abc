@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+"use strict"
+
 const puppeteer = require('puppeteer');
 const puppeteerExecPath = puppeteer.executablePath(); 
 const { extractMetricsFromPerformanceAndTiming } = require('./helpers');
@@ -91,6 +94,7 @@ const printArgDetails = (args) => {
 const getArguments = () => {
 
     const parser = new ArgumentParser({
+        version: '0.0.1',
         addHelp: true,
         description: 'Measure performance metrics of an application'
     });
@@ -103,6 +107,10 @@ const getArguments = () => {
 
 const main = async function() {
     var args = getArguments();
+    if (args['print-metric']){
+        console.log(DEFAULT_METRICS)
+        return
+    }
     console.log();
     const stats = await run_simulation(args);
     printArgDetails(args);
